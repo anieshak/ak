@@ -24,7 +24,7 @@ export default function ProfileCard() {
             </h1>
             <p className="text-base sm:text-lg text-black italic mb-8">
               Hello there! <br />I am a{" "}
-              <span className="font-semibold">'Customer Success Manager'</span>{" "}
+              <span>Customer Success Manager</span>{" "}
               passionate about Technology, Security & using tech to make this
               world a better place to live in.
             </p>
