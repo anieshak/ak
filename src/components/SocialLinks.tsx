@@ -1,7 +1,7 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiOutlineDocument } from "react-icons/hi";
 import { SiCredly } from "react-icons/si";
-import { MdSchedule } from "react-icons/md";
+import { SiCalendly } from "react-icons/si";
 
 export default function SocialLinks() {
   const links = [
@@ -9,7 +9,7 @@ export default function SocialLinks() {
     { name: "Credly", icon: <SiCredly />, url: "https://www.credly.com/users/aniesh-kumar/badges/" },
     { name: "Resume", icon: <HiOutlineDocument />, url: "https://akcv.z30.web.core.windows.net/" },
     { name: "Github", icon: <FaGithub />, url: " https://github.com/anieshak/" },
-    { name: "Schedule a meeting", icon: <MdSchedule />, url: "https://calendly.com/aaniesh/conferencing" },
+    { name: "Schedule a meeting", icon: <SiCalendly />, url: "https://calendly.com/aaniesh/conferencing" },
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function SocialLinks() {
           rel="noreferrer"
           className="flex justify-between items-center px-4 py-3 bg-gray-50 
                      rounded-lg shadow-sm hover:bg-gray-100 hover:scale-105 
-                     transition-all duration-200 group"
+                     transition-all duration-200 group h-[3.5rem]"
         >
           <span className="font-medium text-gray-700 group-hover:text-gray-900">
             {link.name}

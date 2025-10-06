@@ -7,7 +7,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full pt-4">
+    <footer className="w-full pt-4 pb-4">
       <div className="flex justify-center gap-6">
         {socialLinks.map((link) => (
           <a

@@ -12,7 +12,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body { 
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -20,21 +21,80 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  html, body {
+  html,
+  body {
     overflow: auto;
     position: static;
   }
 }
 
 body {
-  background: url("./assets/background-img.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  /* background-image: url("assets/bg-overlay.svg"),
+    linear-gradient(
+      54deg,
+      rgba(23, 20, 20, 0.878) 0%,
+      rgba(224, 224, 224, 0.349) 100%
+    ),
+    url("assets/bg.jpg");
+  background-size: cover, cover, cover;
+  background-position: center, 0% 0%, right;
+  background-repeat: no-repeat, no-repeat, no-repeat; */
+  height: 100vh;
+  min-height: 100vh;
+  min-width: 320px;
+  line-height: 1;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  background-color: #1f1a1a;
 }
 
-#root {
+body::before {
+  content: "";
+  display: block;
+  background-attachment: scroll;
+  height: 100vh;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transform: scale(1);
+  width: 100vw;
+  z-index: 0;
+  background-image: url("assets/bg-overlay.svg"),
+    linear-gradient(
+      54deg,
+      rgba(23, 20, 20, 0.878) 0%,
+      rgba(224, 224, 224, 0.349) 100%
+    ),
+    url("assets/bg.jpg");
+  background-size: cover, cover, cover;
+  background-position: center, 0% 0%, right;
+  background-repeat: no-repeat, repeat, no-repeat;
+}
+
+body::after {
+  background-color: #f7f0f0;
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: fixed;
+  transform: scale(1);
+  z-index: 1;
   height: 100%;
+  left: 0;
+  opacity: 0;
+  top: 0;
+  /* transition: opacity 1.25s ease-in-out 0.375s, visibility 1.25s 0.375s; */
+  visibility: hidden;
+  width: 100%;
 }
 
+html {
+  font-size: 16pt;
+}
+
+@media (max-width: 1680px) {
+  html {
+    font-size: 12pt;
+  }
+}
