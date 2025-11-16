@@ -60,7 +60,7 @@ body::before {
   transform: scale(1);
   width: 100vw;
   z-index: 0;
-  background-image: url("assets/bg-overlay.svg"),
+  /* background-image: url("assets/bg-overlay.svg"),
     linear-gradient(
       54deg,
       rgba(23, 20, 20, 0.878) 0%,
@@ -69,7 +69,7 @@ body::before {
     url("assets/bg.jpg");
   background-size: cover, cover, cover;
   background-position: center, 0% 0%, right;
-  background-repeat: no-repeat, repeat, no-repeat;
+  background-repeat: no-repeat, repeat, no-repeat; */
 }
 
 body::after {
@@ -97,4 +97,8 @@ html {
   html {
     font-size: 12pt;
   }
+}
+
+.instagram:hover svg {
+  fill: url(#instagram-gradient);
 }

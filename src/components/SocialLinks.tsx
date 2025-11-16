@@ -1,35 +1,58 @@
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { HiOutlineDocument } from "react-icons/hi";
-import { SiCredly } from "react-icons/si";
-import { SiCalendly } from "react-icons/si";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function SocialLinks() {
-  const links = [
-    { name: "LinkedIn", icon: <FaLinkedin />, url: "https://www.linkedin.com/in/anieshkumar/" },
-    { name: "Credly", icon: <SiCredly />, url: "https://www.credly.com/users/aniesh-kumar/badges/" },
-    { name: "Resume", icon: <HiOutlineDocument />, url: "https://akcv.z30.web.core.windows.net/" },
-    { name: "Github", icon: <FaGithub />, url: " https://github.com/anieshak/" },
-    { name: "Schedule a meeting", icon: <SiCalendly />, url: "https://calendly.com/aaniesh/conferencing" },
+  const socialLinks = [
+    {
+      name: "X (Twitter)",
+      icon: <FaXTwitter />,
+      url: "https://x.com/AgentAniesh",
+      hoverClass: "hover:text-white hover:bg-black",
+    },
+    {
+      name: "Instagram",
+      icon: <FaInstagram />,
+      url: "https://www.instagram.com/agentaniesh/",
+      hoverClass: `instagram`, // Custom hover class for Instagram`,
+    },
   ];
 
   return (
-    <div className="flex flex-col gap-3 w-full">
-      {links.map((link) => (
+    <div className="flex justify-center gap-6">
+      {/* Define Instagram gradient once */}
+      <svg width="0" height="0" className="absolute">
+        <defs>
+          <linearGradient
+            id="instagram-gradient"
+            x1="0%"
+            y1="100%"
+            x2="100%"
+            y2="0%"
+          >
+            <stop offset="0%" stopColor="#f09433" />
+            <stop offset="25%" stopColor="#e6683c" />
+            <stop offset="50%" stopColor="#dc2743" />
+            <stop offset="75%" stopColor="#cc2366" />
+            <stop offset="100%" stopColor="#bc1888" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      {socialLinks.map((link) => (
         <a
           key={link.name}
           href={link.url}
           target="_blank"
           rel="noreferrer"
-          className="flex justify-between items-center px-4 py-3 bg-gray-50 
-                     rounded-lg shadow-sm hover:bg-gray-100 hover:scale-105 
-                     transition-all duration-200 group h-[3.5rem]"
+          className={`
+              text-3xl text-black 
+              transition-all duration-200 
+              hover:scale-110
+              ${link.hoverClass}
+            `}
+          title={link.name}
         >
-          <span className="font-medium text-gray-700 group-hover:text-gray-900">
-            {link.name}
-          </span>
-          <span className="text-xl text-gray-500 group-hover:text-blue-500">
-            {link.icon}
-          </span>
+          {link.icon}
         </a>
       ))}
     </div>
