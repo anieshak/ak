@@ -9,31 +9,31 @@ export default function RelevantLinks() {
       name: "LinkedIn",
       icon: <FaLinkedin />,
       url: "https://www.linkedin.com/in/anieshkumar/",
-      hoverClass: "group-hover:text-[#0a66c2]",
+      hoverClass: "text-[#0a66c2]",
     },
     {
       name: "Credly",
       icon: <SiCredly />,
       url: "https://www.credly.com/users/aniesh-kumar/badges/",
-      hoverClass: "group-hover:text-[#e3732f]",
+      hoverClass: "text-[#e3732f]",
     },
     {
       name: "Resume",
       icon: <HiOutlineDocument />,
       url: "https://akcv.z30.web.core.windows.net/",
-      hoverClass: "group-hover:text-blue-600",
+      hoverClass: "text-blue-600",
     },
     {
       name: "Github",
       icon: <FaGithub />,
       url: " https://github.com/anieshak/",
-      hoverClass: "group-hover:text-[#171515]",
+      hoverClass: "text-[#171515]",
     },
     {
       name: "Schedule a meeting",
       icon: <SiCalendly />,
       url: "https://calendly.com/aaniesh/conferencing",
-      hoverClass: "group-hover:text-[#466cf5]",
+      hoverClass: "text-[#466cf5]",
     },
   ];
 
@@ -52,7 +52,7 @@ export default function RelevantLinks() {
           <span className="font-medium text-gray-700 group-hover:text-gray-900">
             {link.name}
           </span>
-          <span className={`text-xl text-gray-500 ${link.hoverClass || ""}`}>
+          <span className={`text-xl  ${link.hoverClass || ""}`}>
             {link.icon}
           </span>
         </a>

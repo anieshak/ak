@@ -99,6 +99,6 @@ html {
   }
 }
 
-.instagram:hover svg {
+.instagram svg {
   fill: url(#instagram-gradient);
 }

@@ -1,13 +1,12 @@
-import { FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function SocialLinks() {
   const socialLinks = [
     {
-      name: "X (Twitter)",
-      icon: <FaXTwitter />,
-      url: "https://x.com/AgentAniesh",
-      hoverClass: "hover:text-white hover:bg-black",
+      name: "Twitter",
+      icon: <FaTwitter />,
+      url: "https://twitter.com/AgentAniesh",
+      hoverClass: "text-[#1DA1F2]",
     },
     {
       name: "Instagram",
@@ -18,7 +17,7 @@ export default function SocialLinks() {
   ];
 
   return (
-    <div className="flex justify-center gap-6">
+    <div className="flex justify-center gap-6 w-full pt-4 pb-4">
       {/* Define Instagram gradient once */}
       <svg width="0" height="0" className="absolute">
         <defs>
@@ -45,9 +44,9 @@ export default function SocialLinks() {
           target="_blank"
           rel="noreferrer"
           className={`
-              text-3xl text-black 
-              transition-all duration-200 
-              hover:scale-110
+              text-3xl
+              transition-all duration-200
+              hover:scale-150
               ${link.hoverClass}
             `}
           title={link.name}

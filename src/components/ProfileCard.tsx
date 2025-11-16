@@ -1,6 +1,5 @@
 import RelevantLinks from "./RelevantLinks";
 import profileImg from "../assets/aniesh-profile.jpg";
-import SocialLinks from "./SocialLinks";
 
 export default function ProfileCard() {
   return (
@@ -30,9 +29,9 @@ export default function ProfileCard() {
           </p>
 
           {/* Social Links */}
-          <div className="w-full flex flex-col gap-6">
+          <div className="w-full">
             <RelevantLinks />
-            <SocialLinks />
+           
           </div>
         </div>
       </div>
