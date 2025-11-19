@@ -29,16 +29,6 @@ body {
 }
 
 body {
-  /* background-image: url("assets/bg-overlay.svg"),
-    linear-gradient(
-      54deg,
-      rgba(23, 20, 20, 0.878) 0%,
-      rgba(224, 224, 224, 0.349) 100%
-    ),
-    url("assets/bg.jpg");
-  background-size: cover, cover, cover;
-  background-position: center, 0% 0%, right;
-  background-repeat: no-repeat, no-repeat, no-repeat; */
   height: 100vh;
   min-height: 100vh;
   min-width: 320px;
@@ -60,16 +50,6 @@ body::before {
   transform: scale(1);
   width: 100vw;
   z-index: 0;
-  /* background-image: url("assets/bg-overlay.svg"),
-    linear-gradient(
-      54deg,
-      rgba(23, 20, 20, 0.878) 0%,
-      rgba(224, 224, 224, 0.349) 100%
-    ),
-    url("assets/bg.jpg");
-  background-size: cover, cover, cover;
-  background-position: center, 0% 0%, right;
-  background-repeat: no-repeat, repeat, no-repeat; */
 }
 
 body::after {
@@ -84,7 +64,6 @@ body::after {
   left: 0;
   opacity: 0;
   top: 0;
-  /* transition: opacity 1.25s ease-in-out 0.375s, visibility 1.25s 0.375s; */
   visibility: hidden;
   width: 100%;
 }

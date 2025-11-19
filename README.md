@@ -1,69 +1,70 @@
-# React + TypeScript + Vite
+# Aniesh Kumar — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional single-page portfolio built with Vite, React + TypeScript and Tailwind CSS. It showcases a compact profile card, social/relevant links and a responsive layout suitable for desktop and mobile.
 
-Currently, two official plugins are available:
+Live site: https://aniesh.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Highlights
 
-## Expanding the ESLint configuration
+- Minimal, accessible design
+- Responsive layout (desktop uses fixed-centered layout; mobile allows scrolling)
+- Built with modern frontend tooling: Vite, React, TypeScript and Tailwind CSS
+- Assets and favicon are stored in `public/` and `src/assets/`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Vite
+- React (TSX)
+- TypeScript
+- Tailwind CSS
+- Plain CSS for site-level styles (`src/index.css`)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (recommended >= 16.x)
+- npm (or yarn/pnpm as you prefer)
+
+## Local development
+
+Open a terminal (PowerShell on Windows) in the project root and run:
+
+```powershell
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The dev server (Vite) will start and usually be available at `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Build & Preview
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+To build a production bundle:
+
+```powershell
+npm run build
 ```
+
+Preview the production build locally:
+
+```powershell
+npm run preview
+```
+
+## Project structure
+
+Key files and folders:
+
+- `index.html` — app entry and head meta (favicon, fonts)
+- `src/main.tsx` — React entry
+- `src/index.css` — global styles (Tailwind + site overrides)
+- `src/App.tsx` — main app layout
+- `src/components/` — small reusable components (ProfileCard, Background, SocialLinks, RelevantLinks)
+- `src/assets/` — images used by the site
+- `public/` — static files served as-is (e.g. `Aniesh-logo.png`, Bg Video)
+
+## Contributing
+
+This is a personal portfolio. If you'd like to suggest improvements, open an issue or send a PR with small, focused changes (styling fixes, accessibility improvements, minor content updates).
+
+## Contact
+
+Owner: Aniesh Kumar
