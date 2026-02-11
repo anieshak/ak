@@ -17,7 +17,7 @@ export default function SocialLinks() {
   ];
 
   return (
-    <div className="flex justify-center gap-6 w-full pt-4 pb-4">
+    <div className="flex justify-center gap-6 w-full pt-4 pb-6">
       {/* Define Instagram gradient once */}
       <svg width="0" height="0" className="absolute">
         <defs>
@@ -43,10 +43,12 @@ export default function SocialLinks() {
           href={link.url}
           target="_blank"
           rel="noreferrer"
+          aria-label={link.name}
           className={`
               text-3xl
               transition-all duration-200
-              hover:scale-150
+              hover:scale-125
+              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 focus-visible:ring-offset-4
               ${link.hoverClass}
             `}
           title={link.name}
