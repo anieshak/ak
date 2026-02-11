@@ -45,14 +45,15 @@ export default function RelevantLinks() {
           href={link.url}
           target="_blank"
           rel="noreferrer"
-          className="flex justify-between items-center px-4 py-3 bg-gray-50 
-                     rounded-lg shadow-sm hover:bg-gray-100 hover:scale-105 
+          className="flex justify-between items-center px-4 py-3 bg-white/90 
+                     rounded-lg border border-slate-200 shadow-sm hover:bg-slate-50 hover:shadow-md hover:scale-[1.01]
+                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2
                      transition-all duration-200 group h-[3.5rem]"
         >
-          <span className="font-medium text-gray-700 group-hover:text-gray-900">
+          <span className="font-medium text-slate-700 group-hover:text-slate-900">
             {link.name}
           </span>
-          <span className={`text-xl  ${link.hoverClass || ""}`}>
+          <span className={`text-xl ${link.hoverClass || ""}`} aria-hidden="true">
             {link.icon}
           </span>
         </a>
