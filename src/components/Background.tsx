@@ -41,12 +41,38 @@ export default function Background({ children }: { children: ReactNode }) {
     updateMotionPreference();
     setCanvasSupported(canUseCanvas2D());
 
-    mediaQuery.addEventListener("change", updateMotionPreference);
+    // Safari compatibility: use addEventListener if available, fallback to addListener
+    const addMediaListener = () => {
+      if (mediaQuery.addEventListener) {
+        mediaQuery.addEventListener("change", updateMotionPreference);
+      } else if (mediaQuery.addListener) {
+        mediaQuery.addListener(updateMotionPreference);
+      }
+    };
+
+    const removeMediaListener = () => {
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener("change", updateMotionPreference);
+      } else if (mediaQuery.removeListener) {
+        mediaQuery.removeListener(updateMotionPreference);
+      }
+    };
+
+    try {
+      addMediaListener();
+    } catch (e) {
+      console.warn("Failed to add media query listener:", e);
+    }
+
     window.addEventListener("mousemove", updateLightFromMouse);
     window.addEventListener("important-link-hover", handleImportantHover);
 
     return () => {
-      mediaQuery.removeEventListener("change", updateMotionPreference);
+      try {
+        removeMediaListener();
+      } catch (e) {
+        console.warn("Failed to remove media query listener:", e);
+      }
       window.removeEventListener("mousemove", updateLightFromMouse);
       window.removeEventListener("important-link-hover", handleImportantHover);
     };
