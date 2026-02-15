@@ -81,3 +81,28 @@ html {
 .instagram svg {
   fill: url(#instagram-gradient);
 }
+
+@keyframes important-link-pulse {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.32;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+.important-link-pulse {
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  animation: important-link-pulse 1.25s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .important-link-pulse {
+    animation: none;
+  }
+}
