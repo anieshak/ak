@@ -17,6 +17,7 @@ export default function RelevantLinks() {
       icon: <SiCredly />,
       url: "https://www.credly.com/users/aniesh-kumar/badges/",
       hoverClass: "text-[#e3732f]",
+      important: true,
     },
     {
       name: "Resume",
