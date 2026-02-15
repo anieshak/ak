@@ -7,7 +7,7 @@ export default function ProfileCard() {
 
   const cardStyle = useMemo(
     () => ({
-      transform: `perspective(1200px) rotateX(${pointer.rx}deg) rotateY(${pointer.ry}deg) scale(1)`,
+      transform: `perspective(1200px) rotateX(${pointer.rx}deg) rotateY(${pointer.ry}deg) scale(1.005)`,
       boxShadow: `${-pointer.ry * 3}px ${pointer.rx * 5 + 20}px 50px rgba(15, 23, 42, 0.35)`,
     }),
     [pointer],
@@ -15,7 +15,7 @@ export default function ProfileCard() {
 
   return (
     <div
-      className="relative flex w-full flex-col items-stretch gap-0 overflow-hidden rounded-2xl bg-white/95 shadow-xl transition-transform duration-150 lg:flex-row"
+      className="relative bg-white shadow-xl flex flex-col md:flex-row gap-4 items-center rounded-md transition-transform duration-150"
       style={cardStyle}
       onMouseMove={(event) => {
         const rect = event.currentTarget.getBoundingClientRect();
@@ -30,30 +30,30 @@ export default function ProfileCard() {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 rounded-2xl"
+        className="pointer-events-none absolute inset-0 rounded-md"
         style={{
           background: `radial-gradient(circle at ${pointer.x}% ${pointer.y}%, rgba(255,255,255,0.58), rgba(255,255,255,0) 42%)`,
         }}
       />
       {/* Left: Image Section */}
-      <div className="relative z-10 w-full lg:w-2/5">
-        <div className="relative overflow-hidden bg-slate-100">
+      <div className="md:w-124 sm:w-full relative z-10">
+        <div className="relative overflow-hidden bg-gray-100 shadow-md">
           <img
             src={profileImg}
             alt="Aniesh"
             title="Aniesh"
-            className="h-full w-full aspect-[3/4] object-cover object-top"
+            className="w-full aspect-[3/4] object-cover object-top"
           />
         </div>
       </div>
 
       {/* Right: Content Section */}
-      <div className="relative z-10 flex w-full flex-1 flex-col justify-center p-5 sm:p-8 lg:w-3/5 lg:p-10">
+      <div className="flex-1 flex flex-col justify-center p-10 md:w-124 sm:w-full relative z-10">
         <div>
-          <h1 className="mb-3 text-2xl font-semibold italic tracking-tight text-black sm:text-3xl lg:text-4xl">
+          <h1 className="text-3xl lg:text-4xl tracking-tight font-semibold mb-3 text-black italic">
             Aniesh Kumar
           </h1>
-          <p className="mb-6 text-base leading-relaxed text-slate-800 italic sm:mb-8 sm:text-lg">
+          <p className="text-base text-lg text-black italic mb-8">
             Hello there! <br />I am a <span>Customer Success Manager</span>{" "}
             passionate about Technology, Security & using tech to make this
             world a better place to live in.

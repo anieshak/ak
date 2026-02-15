@@ -12,15 +12,22 @@ export default function SocialLinks() {
       name: "Instagram",
       icon: <FaInstagram />,
       url: "https://www.instagram.com/agentaniesh/",
-      hoverClass: "instagram",
+      hoverClass: `instagram`, // Custom hover class for Instagram`,
     },
   ];
 
   return (
-    <div className="w-full pt-4 pb-1 sm:pb-3">
+    <div className="flex justify-center gap-6 w-full pt-4 pb-6">
+      {/* Define Instagram gradient once */}
       <svg width="0" height="0" className="absolute">
         <defs>
-          <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+          <linearGradient
+            id="instagram-gradient"
+            x1="0%"
+            y1="100%"
+            x2="100%"
+            y2="0%"
+          >
             <stop offset="0%" stopColor="#f09433" />
             <stop offset="25%" stopColor="#e6683c" />
             <stop offset="50%" stopColor="#dc2743" />
@@ -30,21 +37,25 @@ export default function SocialLinks() {
         </defs>
       </svg>
 
-      <div className="flex justify-center gap-4 sm:gap-6">
-        {socialLinks.map((link) => (
-          <a
-            key={link.name}
-            href={link.url}
-            target="_blank"
-            rel="noreferrer"
-            className={`flex h-11 w-11 items-center justify-center rounded-full bg-white/85 text-2xl text-slate-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400 sm:h-12 sm:w-12 ${link.hoverClass}`}
-            title={link.name}
-            aria-label={link.name}
-          >
-            {link.icon}
-          </a>
-        ))}
-      </div>
+      {socialLinks.map((link) => (
+        <a
+          key={link.name}
+          href={link.url}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={link.name}
+          className={`
+              text-3xl
+              transition-all duration-200
+              hover:scale-125
+              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 focus-visible:ring-offset-4
+              ${link.hoverClass}
+            `}
+          title={link.name}
+        >
+          {link.icon}
+        </a>
+      ))}
     </div>
   );
 }

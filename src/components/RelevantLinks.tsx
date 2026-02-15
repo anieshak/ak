@@ -1,6 +1,7 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiOutlineDocument } from "react-icons/hi";
-import { SiCredly, SiCalendly } from "react-icons/si";
+import { SiCredly } from "react-icons/si";
+import { SiCalendly } from "react-icons/si";
 
 export default function RelevantLinks() {
   const links = [
@@ -28,7 +29,7 @@ export default function RelevantLinks() {
     {
       name: "Github",
       icon: <FaGithub />,
-      url: "https://github.com/anieshak/",
+      url: " https://github.com/anieshak/",
       hoverClass: "text-[#171515]",
     },
     {
@@ -41,7 +42,7 @@ export default function RelevantLinks() {
   ];
 
   return (
-    <div className="flex w-full flex-col gap-2.5 sm:gap-3">
+    <div className="flex flex-col gap-3 w-full">
       {links.map((link) => (
         <a
           key={link.name}
@@ -52,16 +53,16 @@ export default function RelevantLinks() {
             if (!link.important) return;
             const x = (event.clientX / window.innerWidth) * 100;
             const y = (event.clientY / window.innerHeight) * 100;
-            window.dispatchEvent(
-              new CustomEvent("important-link-hover", { detail: { x, y } }),
-            );
+            window.dispatchEvent(new CustomEvent("important-link-hover", { detail: { x, y } }));
           }}
-          className="group flex min-h-12 items-center justify-between gap-3 rounded-lg border border-slate-200/80 bg-slate-50 px-3 py-2.5 text-sm shadow-sm transition-all duration-200 hover:scale-[1.015] hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400 sm:px-4 sm:py-3 sm:text-base"
+          className="flex justify-between items-center px-4 py-3 bg-gray-50 
+                     rounded-lg shadow-sm hover:bg-gray-100 hover:scale-[1.02]
+                     transition-all duration-200 group h-[3.5rem]"
         >
-          <span className="font-medium text-slate-700 transition-colors group-hover:text-slate-900">
+          <span className="font-medium text-gray-700 group-hover:text-gray-900">
             {link.name}
           </span>
-          <span className={`relative shrink-0 text-lg sm:text-xl ${link.hoverClass || ""}`}>
+          <span className={`relative text-xl ${link.hoverClass || ""}`}>
             {link.icon}
             {link.important ? (
               <span
