@@ -55,7 +55,7 @@ export default function Background({ children }: { children: ReactNode }) {
   const showAnimatedBackground = canvasSupported && !reducedMotion;
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-black">
+          <div className="relative w-screen min-h-screen overflow-x-hidden bg-black">
       {showAnimatedBackground ? (
         <BinaryRainBackground lightX={light.x} lightY={light.y} pulseStrength={pulse} />
       ) : (

@@ -25,6 +25,7 @@ body {
   body {
     overflow: auto;
     position: static;
+        height: auto;
   }
 }
 
@@ -75,6 +76,12 @@ html {
 @media (max-width: 1680px) {
   html {
     font-size: 12pt;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 10pt;
   }
 }
 
