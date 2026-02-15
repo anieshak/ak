@@ -97,7 +97,7 @@ export default function BinaryRainBackground({
   }, []);
 
   return (
-    <div className="absolute inset-0 z-0" aria-hidden="true">
+    <div className="fixed inset-0 z-0" aria-hidden="true">
       <canvas ref={canvasRef} className="h-full w-full" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/35 to-black/55" />
       <div

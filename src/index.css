@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light;
-  color: #0f172a;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,78 +11,56 @@
 }
 
 html,
-body {
+body,
+#root {
   margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  html,
-  body {
-    overflow: auto;
-    position: static;
-  }
-}
-
-body {
-  height: 100vh;
-  min-height: 100vh;
-  min-width: 320px;
-  line-height: 1.5;
-  overflow-x: hidden;
-  word-wrap: break-word;
-  background-color: #1f1a1a;
-}
-
-body::before {
-  content: "";
-  display: block;
-  background-attachment: scroll;
-  height: 100vh;
-  left: 0;
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  transform: scale(1);
-  width: 100vw;
-  z-index: 0;
-}
-
-body::after {
-  background-color: #f7f0f0;
-  content: "";
-  display: block;
-  pointer-events: none;
-  position: fixed;
-  transform: scale(1);
-  z-index: 1;
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  top: 0;
-  visibility: hidden;
+  min-height: 100%;
   width: 100%;
 }
 
 html {
-  font-size: 16pt;
+  font-size: 16px;
 }
 
-@media (max-width: 1680px) {
-  html {
-    font-size: 12pt;
-  }
-}
-
-:focus-visible {
-  outline: 2px solid #94a3b8;
-  outline-offset: 2px;
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  background-color: #020617;
 }
 
 .instagram svg {
   fill: url(#instagram-gradient);
+}
+
+@keyframes important-link-pulse {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.32;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+.important-link-pulse {
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  animation: important-link-pulse 1.25s ease-out infinite;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .important-link-pulse {
+    animation: none;
+  }
 }
 
 @keyframes important-link-pulse {

@@ -55,7 +55,7 @@ export default function Background({ children }: { children: ReactNode }) {
   const showAnimatedBackground = canvasSupported && !reducedMotion;
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-black">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-black">
       {showAnimatedBackground ? (
         <BinaryRainBackground lightX={light.x} lightY={light.y} pulseStrength={pulse} />
       ) : (
@@ -67,7 +67,7 @@ export default function Background({ children }: { children: ReactNode }) {
               muted
               playsInline
               aria-hidden="true"
-              className="fixed top-0 left-0 w-full h-full object-cover z-0"
+              className="fixed top-0 left-0 h-full w-full object-cover"
             >
               <source src="/Bg Video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -75,11 +75,11 @@ export default function Background({ children }: { children: ReactNode }) {
           )}
           <div
             aria-hidden="true"
-            className="fixed inset-0 z-0 bg-gradient-to-br from-black via-slate-950 to-slate-900"
+            className="fixed inset-0 bg-gradient-to-br from-black via-slate-950 to-slate-900"
           />
         </>
       )}
-      <div className="relative z-10">{children}</div>
+      <div className="relative z-10 min-h-screen">{children}</div>
     </div>
   );
 }
