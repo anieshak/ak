@@ -85,7 +85,7 @@ export default function Background({ children }: { children: ReactNode }) {
       {showAnimatedBackground ? (
         <BinaryRainBackground lightX={light.x} lightY={light.y} pulseStrength={pulse} />
       ) : (
-        <> 
+        <>
           {!reducedMotion && (
             <video
               autoPlay
@@ -98,7 +98,7 @@ export default function Background({ children }: { children: ReactNode }) {
               <source src="/Bg Video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          )} 
+          )}
           <div
             aria-hidden="true"
             className="fixed inset-0 z-0 bg-gradient-to-br from-black via-slate-950 to-slate-900"
