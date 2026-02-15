@@ -12,22 +12,15 @@ export default function SocialLinks() {
       name: "Instagram",
       icon: <FaInstagram />,
       url: "https://www.instagram.com/agentaniesh/",
-      hoverClass: `instagram`, // Custom hover class for Instagram`,
+      hoverClass: "instagram",
     },
   ];
 
   return (
-    <div className="flex justify-center gap-6 w-full pt-4 pb-4">
-      {/* Define Instagram gradient once */}
+    <div className="w-full pt-4 pb-1 sm:pb-3">
       <svg width="0" height="0" className="absolute">
         <defs>
-          <linearGradient
-            id="instagram-gradient"
-            x1="0%"
-            y1="100%"
-            x2="100%"
-            y2="0%"
-          >
+          <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#f09433" />
             <stop offset="25%" stopColor="#e6683c" />
             <stop offset="50%" stopColor="#dc2743" />
@@ -37,23 +30,21 @@ export default function SocialLinks() {
         </defs>
       </svg>
 
-      {socialLinks.map((link) => (
-        <a
-          key={link.name}
-          href={link.url}
-          target="_blank"
-          rel="noreferrer"
-          className={`
-              text-3xl
-              transition-all duration-200
-              hover:scale-150
-              ${link.hoverClass}
-            `}
-          title={link.name}
-        >
-          {link.icon}
-        </a>
-      ))}
+      <div className="flex justify-center gap-4 sm:gap-6">
+        {socialLinks.map((link) => (
+          <a
+            key={link.name}
+            href={link.url}
+            target="_blank"
+            rel="noreferrer"
+            className={`flex h-11 w-11 items-center justify-center rounded-full bg-white/85 text-2xl text-slate-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400 sm:h-12 sm:w-12 ${link.hoverClass}`}
+            title={link.name}
+            aria-label={link.name}
+          >
+            {link.icon}
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
