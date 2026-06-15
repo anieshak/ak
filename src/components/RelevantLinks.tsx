@@ -15,7 +15,7 @@ export default function RelevantLinks() {
     {
       name: "Credly",
       icon: <SiCredly />,
-      url: "https://www.credly.com/users/aniesh-kumar/badges/",
+      url: "https://www.credly.com/users/aniesh-kumar/badges/credly",
       hoverClass: "text-[#e3732f]",
       important: true,
     },
