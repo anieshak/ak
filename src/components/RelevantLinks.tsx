@@ -22,7 +22,7 @@ export default function RelevantLinks() {
     {
       name: "Resume",
       icon: <HiOutlineDocument />,
-      url: "https://akcv.z30.web.core.windows.net/",
+      url: "https://aniesh.lovable.app/resume/index.html",
       hoverClass: "text-blue-600",
       important: true,
     },
