@@ -35,7 +35,7 @@ export default function RelevantLinks() {
     {
       name: "Schedule a meeting",
       icon: <SiCalendly />,
-      url: "https://calendly.com/aaniesh/conferencing",
+      url: "https://calendly.com/aaniesh/conference",
       hoverClass: "text-[#466cf5]",
       important: true,
     },
