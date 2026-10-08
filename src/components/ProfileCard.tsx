@@ -60,6 +60,15 @@ export default function ProfileCard() {
             to live in.
           </p>
 
+          <section aria-labelledby="product-title" className="mb-6 rounded-lg border border-violet-100 bg-violet-50 p-4 text-gray-700">
+            <h2 id="product-title" className="font-semibold text-violet-900">Building Aniesh Prep</h2>
+            <p className="mt-1 text-sm leading-relaxed">An early-stage independent certification preparation platform, starting with Claude Certified Architect – Foundations. Original scenarios, authored explanations and optional Claude-powered Architecture Lens.</p>
+            <p className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm font-medium text-violet-800">
+              <a href="https://prep.aniesh.com/about#lens-demo" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600">See the product walkthrough</a>
+              <a href="https://aniesh.lovable.app/projects" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600">Read the build note</a>
+            </p>
+          </section>
+
           {/* Social Links */}
           <div className="w-full">
             <RelevantLinks />
