@@ -27,10 +27,18 @@ export default function RelevantLinks() {
       important: true,
     },
     {
-      name: "Github",
+      name: "GitHub",
       icon: <FaGithub />,
-      url: " https://github.com/anieshak/",
+      url: "https://github.com/anieshak/",
       hoverClass: "text-[#171515]",
+    },
+    {
+      name: "Projects",
+      icon: <img src="/aniesh-prep-icon.png" width="20" height="20" alt="" className="size-5 object-contain" />,
+      url: "/projects/",
+      hoverClass: "text-violet-700",
+      important: true,
+      internal: true,
     },
     {
       name: "Schedule a meeting",
@@ -47,8 +55,8 @@ export default function RelevantLinks() {
         <a
           key={link.name}
           href={link.url}
-          target="_blank"
-          rel="noreferrer"
+          target={link.internal ? undefined : "_blank"}
+          rel={link.internal ? undefined : "noopener noreferrer"}
           onMouseEnter={(event) => {
             if (!link.important) return;
             const x = (event.clientX / window.innerWidth) * 100;
