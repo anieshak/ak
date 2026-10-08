@@ -30,7 +30,7 @@ export default function ProjectsPage() {
             <a href="https://prep.aniesh.com/about#lens-demo" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 font-medium text-violet-800 underline underline-offset-4 hover:text-violet-950">
               See Lens in action <HiOutlineArrowUpRight aria-hidden="true" />
             </a>
-            <a href="#build-note" className="inline-flex min-h-11 items-center font-medium text-gray-600 underline underline-offset-4 hover:text-black">Read the build note</a>
+            <a href="/projects/buildnotes/" className="inline-flex min-h-11 items-center font-medium text-gray-600 underline underline-offset-4 hover:text-black">Read the build note</a>
           </nav>
           <p className="mt-4 text-sm leading-relaxed text-gray-500">{anieshPrep.disclaimer}</p>
 
@@ -71,7 +71,8 @@ export default function ProjectsPage() {
 
           <section id="build-note" aria-labelledby="build-note-title" className="mt-10 scroll-mt-6 border-t border-gray-200 pt-8">
             <h3 id="build-note-title" className="text-lg font-semibold text-black">Build note</h3>
-            {anieshPrep.buildNote.split("\n\n").map((paragraph) => <p key={paragraph} className="mt-3 max-w-3xl leading-relaxed">{paragraph}</p>)}
+            <p className="mt-3 max-w-3xl leading-relaxed">How I revised the renewal question to test architectural judgment, checked competing answers, and protected historical progress.</p>
+            <a href="/projects/buildnotes/" className="mt-3 inline-flex min-h-11 items-center font-medium text-violet-800 underline underline-offset-4 hover:text-violet-950">Read the full build note</a>
           </section>
           <section aria-labelledby="direction-title" className="mt-8">
             <h3 id="direction-title" className="text-lg font-semibold text-black">Product direction</h3>

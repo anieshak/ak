@@ -4,8 +4,12 @@ import Background from "./components/Background";
 import SocialLinks from "./components/SocialLinks";
 
 const ProjectsPage = lazy(() => import("./components/ProjectsPage"));
+const BuildNotePage = lazy(() => import("./components/BuildNotePage"));
 
 export default function App() {
+  if (/^\/projects\/buildnotes\/?$/.test(window.location.pathname)) {
+    return <Background><Suspense fallback={<p role="status" className="p-6 text-white">Opening build note…</p>}><BuildNotePage /></Suspense></Background>;
+  }
   if (/^\/projects\/?$/.test(window.location.pathname)) {
     return <Background><Suspense fallback={<p role="status" className="p-6 text-white">Opening projects…</p>}><ProjectsPage /></Suspense></Background>;
   }

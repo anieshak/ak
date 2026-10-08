@@ -34,6 +34,7 @@ export default defineConfig({
       input: {
         home: 'index.html',
         projects: 'projects/index.html',
+        buildNote: 'projects/buildnotes/index.html',
       },
     },
   },
