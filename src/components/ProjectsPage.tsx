@@ -27,7 +27,7 @@ export default function ProjectsPage() {
             <a href="https://prep.aniesh.com/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-violet-700 px-5 py-3 font-medium text-white hover:bg-violet-800">
               Explore Aniesh Prep <HiOutlineArrowUpRight aria-hidden="true" />
             </a>
-            <a href="https://prep.aniesh.com/about#lens-demo" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 font-medium text-violet-800 underline underline-offset-4 hover:text-violet-950">
+            <a href="https://prep.aniesh.com/projects/lensdemo" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 font-medium text-violet-800 underline underline-offset-4 hover:text-violet-950">
               See Lens in action <HiOutlineArrowUpRight aria-hidden="true" />
             </a>
             <a href="/projects/buildnotes/" className="inline-flex min-h-11 items-center font-medium text-gray-600 underline underline-offset-4 hover:text-black">Read the build note</a>
