@@ -14,12 +14,16 @@ export default function ProjectsPage() {
         </header>
 
         <article aria-labelledby="aniesh-prep-title" className="pt-8">
-          <div className="flex items-center gap-4">
-            <img src="/aniesh-prep-icon.png" width="48" height="48" alt="" className="size-12 shrink-0 object-contain" />
-            <div>
-              <p className="text-sm text-gray-500">Early-stage product · Certification preparation</p>
-              <h2 id="aniesh-prep-title" className="mt-1 text-2xl font-semibold tracking-tight text-black sm:text-3xl">Aniesh Prep</h2>
-            </div>
+          <div className="space-y-3">
+            <p className="text-sm leading-relaxed text-gray-500">Early-stage product · Certification preparation</p>
+            <h2 id="aniesh-prep-title" className="text-2xl font-semibold leading-tight tracking-tight text-black sm:text-3xl">
+              <a href="https://prep.aniesh.com/" target="_blank" rel="noopener noreferrer" className="group inline-flex min-h-12 max-w-full items-center gap-3 rounded-md transition-colors hover:text-violet-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-700 sm:gap-4">
+                <img src="/aniesh-prep-icon.png" width="48" height="48" alt="" className="size-12 shrink-0 object-contain" />
+                <span className="underline decoration-transparent underline-offset-4 group-hover:decoration-current group-focus-visible:decoration-current">Aniesh Prep</span>
+                <HiOutlineArrowUpRight aria-hidden="true" className="size-5 shrink-0 text-violet-700" />
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            </h2>
           </div>
           <p className="mt-6 text-xl font-semibold leading-snug text-violet-900 sm:text-2xl">Certification practice that explains the tradeoffs.</p>
           <p className="mt-4 max-w-3xl leading-relaxed">An independent preparation platform for cloud and AI professionals, starting with Claude Certified Architect – Foundations. Practise realistic questions, compare authored explanations, and optionally explore your selected answer with Claude.</p>
@@ -28,7 +32,7 @@ export default function ProjectsPage() {
               Explore Aniesh Prep <HiOutlineArrowUpRight aria-hidden="true" />
             </a>
             <a href="https://prep.aniesh.com/projects/lensdemo" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 font-medium text-violet-800 underline underline-offset-4 hover:text-violet-950">
-              See Lens in action <HiOutlineArrowUpRight aria-hidden="true" />
+              See Architecture Lens in action <HiOutlineArrowUpRight aria-hidden="true" className="shrink-0" />
             </a>
             <a href="/projects/buildnotes/" className="inline-flex min-h-11 items-center font-medium text-gray-600 underline underline-offset-4 hover:text-black">Read the build note</a>
           </nav>
