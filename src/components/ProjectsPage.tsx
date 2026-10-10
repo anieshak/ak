@@ -39,8 +39,10 @@ export default function ProjectsPage() {
           <p className="mt-4 text-sm leading-relaxed text-gray-500">{anieshPrep.disclaimer}</p>
 
           <figure className="mt-8">
-            <img src="/aniesh-prep-welcome-20261008.jpg" alt="Aniesh Prep welcome screen with sample-question and Lens walkthrough links, plus email or Google sign-in." width="1348" height="926" loading="lazy" className="h-auto w-full rounded-lg border border-gray-200" />
-            <figcaption className="mt-3 text-sm text-gray-500">Aniesh Prep · Welcome and sign-in · Captured 8 October 2026</figcaption>
+            <a href="https://prep.aniesh.com/" target="_blank" rel="noopener noreferrer" className="block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-700" aria-label="Open Aniesh Prep from the product preview (opens in a new tab)">
+              <img src="/aniesh-prep-welcome-20261010.jpg" alt="Aniesh Prep welcome screen showing the current certification track, free samples, Architecture Lens demo, and sign-in options." width="1363" height="936" loading="lazy" className="h-auto w-full rounded-lg border border-gray-200" />
+            </a>
+            <figcaption className="mt-3 text-sm leading-relaxed text-gray-500">Product preview · Captured 10 October 2026. <a href="https://prep.aniesh.com/" target="_blank" rel="noopener noreferrer" className="text-violet-800 underline underline-offset-4 hover:text-violet-950">Open Aniesh Prep to explore<span className="sr-only"> (opens in a new tab)</span></a>.</figcaption>
           </figure>
 
           <div className="mt-10 grid gap-8 border-t border-gray-200 pt-8 md:grid-cols-2 md:gap-12">
@@ -55,11 +57,12 @@ export default function ProjectsPage() {
               <ul className="mt-3 list-disc space-y-2 pl-5 leading-relaxed">
                 {anieshPrep.capabilities.map((capability) => <li key={capability}>{capability}</li>)}
               </ul>
+              <p className="mt-3 text-sm leading-relaxed text-gray-500">Sign in with email/password or Google.</p>
               <h3 className="mt-8 text-lg font-semibold text-black">Design and technical decisions</h3>
               <ul className="mt-3 space-y-4 leading-relaxed">
-                <li><strong className="text-gray-900">Keep the quiz simple.</strong> Select an answer, read the authored explanation, and optionally use Lens. No typed reasoning is required.</li>
-                <li><strong className="text-gray-900">Protect learner progress.</strong> Supabase authentication and database row-level security scope saved progress to each account. Historical question versions preserve the meaning of recorded answers.</li>
-                <li><strong className="text-gray-900">Keep Claude behind the backend.</strong> Lens validates the submitted practice answer and account consent, enforces usage limits, and streams the response. Application storage retains usage and feedback metadata rather than generated explanation text.</li>
+                <li><strong className="text-gray-900">Keep practice focused.</strong> Learners select an answer and read the authored explanation. Architecture Lens offers optional help understanding the decision and exploring alternative scenarios.</li>
+                <li><strong className="text-gray-900">Preserve progress and answer history.</strong> Supabase authentication and row-level security isolate each learner’s saved progress. Question versioning preserves the meaning of historical answers and scores.</li>
+                <li><strong className="text-gray-900">Make Claude assistance controlled and transparent.</strong> Backend checks validate the submitted practice answer, account consent, and usage limits before streaming feedback. Application storage retains usage and feedback metadata, not generated explanation text.</li>
               </ul>
               <p className="mt-4 text-sm text-gray-500">Designed and built with AI assistance.</p>
             </section>
