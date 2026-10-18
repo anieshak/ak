@@ -38,12 +38,11 @@ export default function RelevantLinks() {
       url: "/projects/",
       hoverClass: "text-violet-700",
       important: true,
-      internal: true,
     },
     {
       name: "Schedule a meeting",
       icon: <SiCalendly />,
-      url: "https://calendly.com/aaniesh/conference",
+      url: "https://calendly.com/aaniesh/conferencing",
       hoverClass: "text-[#466cf5]",
       important: true,
     },
@@ -55,8 +54,8 @@ export default function RelevantLinks() {
         <a
           key={link.name}
           href={link.url}
-          target={link.internal ? undefined : "_blank"}
-          rel={link.internal ? undefined : "noopener noreferrer"}
+          target="_blank"
+          rel="noopener noreferrer"
           onMouseEnter={(event) => {
             if (!link.important) return;
             const x = (event.clientX / window.innerWidth) * 100;
